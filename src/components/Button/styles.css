@@ -1,0 +1,17 @@
+button {
+    padding: 0.6rem 2rem;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    cursor: pointer;
+    letter-spacing: .08rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 2px;
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: translateY(-0.2em);
+    background-color: var(--dark-blue);
+}
