@@ -1,7 +1,14 @@
+.editor-top{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
 .queries{
     background: #F5F5F5;
     padding: 16px;
     border-radius: 8px;
+    flex: 0.3;
 }
 
 .editor{
@@ -12,6 +19,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-height: 300px;
+    flex: 0.3;
 }
 
 .query {
@@ -28,15 +37,14 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    overflow: auto;
 }
 
-.editor-top{
-    display: flex;
-    gap: 20px;
-}
+
 
 .editor-panel {
-    width: 100%;
+    flex: 0.7;
+    width: 300px;
 }
 
 .editor-action {
@@ -45,4 +53,30 @@
     align-items: center;
     justify-content: flex-end;
     padding: 4px 0;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.tab.active{
+    background-color: rgba(0,0,0,0.05);
+}
+
+@media screen and (max-width: 800px) {
+    .editor-top{
+        flex-direction: column;
+    }
+    .editor-panel {
+        width: 100%;
+    }
 }
