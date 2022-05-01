@@ -1,0 +1,48 @@
+.queries{
+    background: #F5F5F5;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.editor{
+    padding: 0 20px;
+}
+
+.query-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.query {
+    border-radius: 8px;
+    background: white;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text-blue);
+    font-weight: 500;
+}
+
+.query-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.editor-top{
+    display: flex;
+    gap: 20px;
+}
+
+.editor-panel {
+    width: 100%;
+}
+
+.editor-action {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 4px 0;
+}
