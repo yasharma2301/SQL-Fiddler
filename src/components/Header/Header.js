@@ -8,7 +8,7 @@ export default function Header() {
         <div className='header'>
             <div className='container'>
                 <Link to='/'>
-                    <img src={logo} className='logo'></img>
+                    <img src={logo} className='logo' alt='logo'></img>
                 </Link>
             </div>
         </div>

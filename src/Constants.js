@@ -1,4 +1,5 @@
 export const SELECT_ALL_PRODUCTS = 'SELECT * FROM Products;'
-export const SELECT_SOME_FROM_PRODUCTS = 'SELECT name, productID, supplierID, unitsInStock FROM Products;'
-export const SELECT_SUPPLIER_GREATER = 'SELECT * FROM Suppliers WHERE supplierID > 25;'
+export const SELECT_SOME_FROM_PRODUCTS = 'SELECT name, productID, supplierID, unitsInStock\nFROM Products;'
+export const SELECT_SUPPLIER_GREATER = 'SELECT * FROM Suppliers\nWHERE supplierID > 25;'
 export const MAP_PRODUCTS_TO_COMPANIES = 'SELECT Products.name AS productName, Suppliers.companyName\nFROM Products\nINNER JOIN Suppliers\nON Products.supplierID = Suppliers.supplierID;'
+export const SELECT_COUNT_PRODUCTS_BY_SUPPLIER_ID = 'SELECT SupplierID, Count(*) AS supplierEntityCount\nFROM Products\nGROUP BY SupplierID;'

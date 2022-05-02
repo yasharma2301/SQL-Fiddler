@@ -1,0 +1,19 @@
+
+.editor-panel {
+    flex: 0.7;
+    width: 300px;
+}
+
+.editor-action {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 4px 0;
+}
+
+@media screen and (max-width: 800px) {
+    .editor-panel {
+        width: 100%;
+    }
+}

@@ -9,6 +9,11 @@ import Footer from '../Footer/Footer'
 export default function Home() {
     const navigate = useNavigate();
 
+    const openInNewTab = (url) => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+      }
+
     return (
         <>
             <div className='container'>
@@ -19,7 +24,7 @@ export default function Home() {
                         <div>Execute queries with our user-friendly tool.<br />Read tutorials, try examples, write queries and colaborate.</div>
                         <div className='home-actions'>
                             <Button name="Get Started" onClick={() => navigate('/editor')} />
-                            <Button name="Github" />
+                            <Button name="Github" onClick={() => openInNewTab('https://github.com/yasharma2301/SQL-Fiddler')}/>
                         </div>
                     </div>
                     <img src={artwork} alt='' className='artwork'></img>
@@ -27,7 +32,7 @@ export default function Home() {
                 <Features />
 
             </div>
-            <Footer></Footer>
+            <Footer />
         </>
     )
 }

@@ -1,6 +1,6 @@
 import { Products } from './assets/data/products'
 import { Suppliers } from './assets/data/suppliers';
-import { SELECT_ALL_PRODUCTS, SELECT_SOME_FROM_PRODUCTS, SELECT_SUPPLIER_GREATER, MAP_PRODUCTS_TO_COMPANIES } from './Constants'
+import { SELECT_ALL_PRODUCTS, SELECT_SOME_FROM_PRODUCTS, SELECT_SUPPLIER_GREATER, MAP_PRODUCTS_TO_COMPANIES, SELECT_COUNT_PRODUCTS_BY_SUPPLIER_ID } from './Constants'
 import { toast } from 'react-toastify';
 
 /**
@@ -39,6 +39,21 @@ export const processQuery = (query) => {
 
                 return acc;
             }, [])
+        case SELECT_COUNT_PRODUCTS_BY_SUPPLIER_ID:
+            const mappedProducts = Products.reduce((acc, product) => {
+                if (!acc[product.supplierID])
+                    acc[product.supplierID] = 0;
+                acc[product.supplierID]++;
+                return acc;
+            }, {})
+            const result = [];
+            for (const [key, val] of Object.entries(mappedProducts)) {
+                result.push({
+                    'supplierId': key,
+                    'supplierEntityCount': val
+                })
+            }
+            return result;
         default:
             toast.error('Select a predefined query')
             return null
