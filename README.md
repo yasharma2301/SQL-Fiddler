@@ -46,8 +46,7 @@ Load time and other optimisation calucluations are done through Google Lighthous
 
 Note that before using the command 'npm install' remove the 'package-lock.json' file.
 ```sh
-git clone https://github.com/yasharma2301/color-plus.git
-cd color-plus
+git clone https://github.com/yasharma2301/SQL-Fiddler
 npm install
 npm start
 ```
