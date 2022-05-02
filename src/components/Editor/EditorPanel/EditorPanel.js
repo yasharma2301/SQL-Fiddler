@@ -13,11 +13,8 @@ const CodeMirror = lazy(() => import('@uiw/react-codemirror'))
 export default function EditorPanel() {
     const { query, setQuery, addToHistory, addToSaved, setQueryResult } = useQuery();
     
-    const data = useMemo(() => {
-        return processQuery(query);
-    }, [query])
-
     const runQuery = () => {
+        const data = processQuery(query);
         addToHistory(query)
         setQueryResult(data);
     };
