@@ -3,14 +3,14 @@ import './styles.css'
 import { BsDownload } from 'react-icons/bs'
 import { CSVLink } from "react-csv";
 
-export default function Table({ queryResult }) {
+export default function Table({ queryResult, time }) {
     return (
         <div className='result'>
             {
                 queryResult?.length >= 1 ? (
                     <div>
                         <div className='table-metadata'>
-                            <div>Fetched {queryResult.length} results</div>
+                            <div>Fetched {queryResult.length} results in ({time})ms</div>
                             <CSVLink data={queryResult} filename="SQLFiddler.csv">
                                 <div className='download'>
                                     <h5>ExportCSV</h5>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import './styles.css'
 import CodeMirror from '@uiw/react-codemirror';
 import { sql } from '@codemirror/lang-sql';
@@ -17,9 +17,14 @@ export default function Editor() {
   const [queryResult, setQueryResult] = useState([]);
   const [savedTab, setSavedTab] = useState(true);
   const [search, setSearch] = useState('');
+  const [time, setTime] = useState(0)
 
   const runQuery = () => {
-    const queryResults = processQuery(query);
+    const startTime = new Date().getTime();
+    const queryResults = processQuery(query)
+    const endTime = new Date().getTime();
+    const timeDifferene = endTime - startTime;
+    setTime(timeDifferene)
     addToHistory(query)
     setQueryResult(queryResults);
   };
@@ -75,7 +80,7 @@ export default function Editor() {
         </div>
       </div>
 
-      <Table queryResult={queryResult} />
+      <Table queryResult={queryResult} time={time} />
 
     </div >
   )
