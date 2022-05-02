@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useMemo } from 'react'
+import React, { Suspense, lazy } from 'react'
 import { useQuery } from '../../../Context';
 import './styles.css'
 import { processQuery } from '../../../QueryData';
