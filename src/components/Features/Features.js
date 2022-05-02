@@ -1,13 +1,12 @@
 import React from 'react'
 import './styles.css'
+const features = [
+  { head: "⚡Blazing fast results", body: "SQL Fiddler is fast, lightweight and free. Specially built for Data Teams." },
+  { head: "🔭Query Watcher", body: "Save complex SQL queries and look for previously run queries at any time" },
+  { head: "💻Code IntelliSense", body: "Improves your productivity through IntelliSense and other code-aware editing features" }
+]
 
 export default function Features() {
-  const features = [
-    { head: "⚡Blazing fast results", body: "SQL Fiddler is fast, lightweight and free. Specially built for Data Teams." },
-    { head: "🔭Query Watcher", body: "Save complex SQL queries and look for previously run queries at any time" },
-    { head: "💻Code IntelliSense", body: "Improves your productivity through IntelliSense and other code-aware editing features" }
-  ]
-
   return (
     <div className='section'>
       <div className='feature-wrapper'>

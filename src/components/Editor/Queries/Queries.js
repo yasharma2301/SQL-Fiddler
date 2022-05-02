@@ -23,7 +23,7 @@ export default function Queries() {
                         <h3>History</h3>
                     </div>
                 </div>
-                <Input placeholder="Search..." value={search} onChange={onSearchChange} />
+                <Input placeholder="Search..." value={search} onChange={onSearchChange} aria_label='search-queries'/>
                 <div className='query-container'>
                     {
                         savedTab ? showFilteredItems(savedQuery) : showFilteredItems(history)

@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, } from 'react'
+import React, { Suspense, lazy, useMemo } from 'react'
 import { useQuery } from '../../../Context';
 import './styles.css'
 import { processQuery } from '../../../QueryData';
@@ -12,11 +12,14 @@ const CodeMirror = lazy(() => import('@uiw/react-codemirror'))
 
 export default function EditorPanel() {
     const { query, setQuery, addToHistory, addToSaved, setQueryResult } = useQuery();
+    
+    const data = useMemo(() => {
+        return processQuery(query);
+    }, [query])
 
     const runQuery = () => {
-        const queryResults = processQuery(query)
         addToHistory(query)
-        setQueryResult(queryResults);
+        setQueryResult(data);
     };
 
     const saveQuery = () => {
@@ -32,6 +35,7 @@ export default function EditorPanel() {
             </div>
             <Suspense fallback={<Loader></Loader>}>
                 <CodeMirror
+                    aria-label='code-editor'
                     options={{
                         lineWrapping: true
                     }}

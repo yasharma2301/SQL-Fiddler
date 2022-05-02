@@ -7,7 +7,7 @@ button {
     letter-spacing: .08rem;
     font-size: 0.9rem;
     font-weight: 500;
-    border-radius: 2px;
+    border-radius: .125rem;
     transition: 0.25s;
     display: flex;
     align-items: center;

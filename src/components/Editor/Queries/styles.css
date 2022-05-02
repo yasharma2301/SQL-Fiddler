@@ -1,22 +1,22 @@
 .queries{
     background: #F5F5F5;
-    padding: 16px;
-    border-radius: 8px;
+    padding: 1rem;
+    border-radius: .5rem;
     flex: 0.3;
 }
 
 .query-panel {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: .75rem;
     max-height: 300px;
     flex: 0.3;
 }
 
 .query {
-    border-radius: 8px;
+    border-radius: .5rem;
     background: white;
-    padding: 8px;
+    padding: .5rem;
     cursor: pointer;
     font-size: 0.9rem;
     color: var(--text-blue);
@@ -26,7 +26,7 @@
 .query-container {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: .5rem;
     overflow: auto;
 }
 
@@ -38,8 +38,8 @@
 
 .tab {
     cursor: pointer;
-    padding: 8px;
-    border-radius: 4px;
+    padding: .5rem;
+    border-radius: .25rem;
     text-align: center;
 }
 

@@ -11,7 +11,6 @@ import { toast } from 'react-toastify';
 export const processQuery = (query) => {
     switch (query) {
         case SELECT_ALL_PRODUCTS:
-            console.log(SELECT_ALL_PRODUCTS)
             return Products.map(product => flattenStrcuture(product));
         case SELECT_SOME_FROM_PRODUCTS:
             return Products.map(product => (
