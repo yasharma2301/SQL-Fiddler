@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../Button/Button'
 import './styles.css'
-import artwork from '../../assets/artwork.png'
+import artwork from '../../assets/artwork.webp'
 import { useNavigate } from 'react-router-dom'
 import Features from '../Features/Features'
 import Footer from '../Footer/Footer'

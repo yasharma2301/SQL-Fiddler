@@ -1,14 +1,18 @@
+import { Suspense, lazy } from 'react';
 import Header from './components/Header/Header';
-import Home from './components/Home/Home';
-import Editor from './components/Editor/Editor'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { QueryProvider } from './Context'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Loader from './components/Loader/Loader';
+const Home = lazy(() => import('./components/Home/Home'))
+const Editor = lazy(() => import('./components/Editor/Editor'))
+
 
 function App() {
   return (
-    <BrowserRouter>
+    <Suspense fallback={<Loader></Loader>}>
+      <BrowserRouter>
       <Header />
       <ToastContainer position="top-right" autoClose={3000}/>
       <QueryProvider>
@@ -20,6 +24,7 @@ function App() {
         </div>
       </QueryProvider>
     </BrowserRouter>
+    </Suspense>
   );
 }
 

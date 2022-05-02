@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './styles.css'
 import { BsDownload } from 'react-icons/bs'
 import { CSVLink } from "react-csv";
